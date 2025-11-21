@@ -26,7 +26,7 @@
                     data-target="#navbar"
                     aria-expanded="false">
                 </button>
-                <a class="navbar-brand" href="{% url 'index' %}">Learning log</a>
+                <a class="navbar-brand" href="{% url 'index' %}">Learning Log</a>
             </div>
 
             <div id="navbar" class="collapse navbar-collapse">
@@ -39,7 +39,7 @@
                         <li><a href="">Olá, {{ user.username }}</a></li>
                         <li><a href="{% url 'logout' %}">Sair</a></li>
                     {% else %}
-                        <li><a href="{% url 'register' %}">registrar</a></li>
+                        <li><a href="{% url 'register' %}">Registrar</a></li>
                         <li><a href="{% url 'login' %}">Entrar</a></li>
                     {% endif %}
                 </ul>
@@ -47,8 +47,10 @@
 
         </div>
     </nav>
-
-    {% block content %}{% endblock content %}
+    <div class="container">
+        <div>{% block header %}{% endblock header%}</div>
+        <div>{% block content %}{% endblock content %}</div>
+    </div>
 
 </body>
 </html>
