@@ -12,9 +12,10 @@ Antes de começar, certifique-se de ter instalado:
 - Git
 
 Para verificar:
-
+```bash
 python3 --version
 git --version
+``
 
 
 ---
